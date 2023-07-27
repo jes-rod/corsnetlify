@@ -14,6 +14,8 @@ router.get('/', (req, res) => {
 
 router.get('/api', async function (req, res, next) {
 
+    const got = await import('got');
+
     if (req.method === 'OPTIONS') {
         // CORS Preflight
         res.send();
